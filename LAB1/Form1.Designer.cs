@@ -37,8 +37,8 @@ namespace LAB1
             this.Not = new System.Windows.Forms.Button();
             this.Hexagonal = new System.Windows.Forms.Button();
             this.Binary = new System.Windows.Forms.Button();
-            this.Decimal = new System.Windows.Forms.Button();
-            this.Octogonal = new System.Windows.Forms.Button();
+            this.Dec = new System.Windows.Forms.Button();
+            this.Oct = new System.Windows.Forms.Button();
             this.Equal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -122,23 +122,25 @@ namespace LAB1
             this.Binary.UseVisualStyleBackColor = true;
             this.Binary.Click += new System.EventHandler(this.Binary_Click);
             // 
-            // Decimal
+            // Dec
             // 
-            this.Decimal.Location = new System.Drawing.Point(361, 253);
-            this.Decimal.Name = "Decimal";
-            this.Decimal.Size = new System.Drawing.Size(81, 57);
-            this.Decimal.TabIndex = 8;
-            this.Decimal.Text = "DEC";
-            this.Decimal.UseVisualStyleBackColor = true;
+            this.Dec.Location = new System.Drawing.Point(361, 253);
+            this.Dec.Name = "Dec";
+            this.Dec.Size = new System.Drawing.Size(81, 57);
+            this.Dec.TabIndex = 8;
+            this.Dec.Text = "DEC";
+            this.Dec.UseVisualStyleBackColor = true;
+            this.Dec.Click += new System.EventHandler(this.Dec_Click);
             // 
-            // Octogonal
+            // Oct
             // 
-            this.Octogonal.Location = new System.Drawing.Point(274, 254);
-            this.Octogonal.Name = "Octogonal";
-            this.Octogonal.Size = new System.Drawing.Size(81, 57);
-            this.Octogonal.TabIndex = 9;
-            this.Octogonal.Text = "OCT";
-            this.Octogonal.UseVisualStyleBackColor = true;
+            this.Oct.Location = new System.Drawing.Point(274, 254);
+            this.Oct.Name = "Oct";
+            this.Oct.Size = new System.Drawing.Size(81, 57);
+            this.Oct.TabIndex = 9;
+            this.Oct.Text = "OCT";
+            this.Oct.UseVisualStyleBackColor = true;
+            this.Oct.Click += new System.EventHandler(this.Oct_Click);
             // 
             // Equal
             // 
@@ -156,8 +158,8 @@ namespace LAB1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Equal);
-            this.Controls.Add(this.Octogonal);
-            this.Controls.Add(this.Decimal);
+            this.Controls.Add(this.Oct);
+            this.Controls.Add(this.Dec);
             this.Controls.Add(this.Binary);
             this.Controls.Add(this.Hexagonal);
             this.Controls.Add(this.Not);
@@ -183,8 +185,8 @@ namespace LAB1
         private System.Windows.Forms.Button Not;
         private System.Windows.Forms.Button Hexagonal;
         private System.Windows.Forms.Button Binary;
-        private System.Windows.Forms.Button Decimal;
-        private System.Windows.Forms.Button Octogonal;
+        private System.Windows.Forms.Button Dec;
+        private System.Windows.Forms.Button Oct;
         private System.Windows.Forms.Button Or;
         private System.Windows.Forms.Button Equal;
     }

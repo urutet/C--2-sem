@@ -55,7 +55,17 @@ namespace LAB1
 
         private void Not_Click(object sender, EventArgs e)
         {
+            textBox.Text = calc.Not(textBox.Text);
+        }
 
+        private void Oct_Click(object sender, EventArgs e)
+        {
+            textBox.Text = calc.ShowInOctagonal(textBox.Text);
+        }
+
+        private void Dec_Click(object sender, EventArgs e)
+        {
+            textBox.Text = calc.ShowInDecimal(textBox.Text);
         }
     }
 }
