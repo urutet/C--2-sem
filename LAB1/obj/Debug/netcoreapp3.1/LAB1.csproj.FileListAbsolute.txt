@@ -1,0 +1,15 @@
+D:\BSTU\2 sem\ООП\LAB1\bin\Debug\netcoreapp3.1\LAB1.exe
+D:\BSTU\2 sem\ООП\LAB1\bin\Debug\netcoreapp3.1\LAB1.deps.json
+D:\BSTU\2 sem\ООП\LAB1\bin\Debug\netcoreapp3.1\LAB1.runtimeconfig.json
+D:\BSTU\2 sem\ООП\LAB1\bin\Debug\netcoreapp3.1\LAB1.runtimeconfig.dev.json
+D:\BSTU\2 sem\ООП\LAB1\bin\Debug\netcoreapp3.1\LAB1.dll
+D:\BSTU\2 sem\ООП\LAB1\bin\Debug\netcoreapp3.1\LAB1.pdb
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.csprojAssemblyReference.cache
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.Form1.resources
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.csproj.GenerateResource.cache
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.AssemblyInfoInputs.cache
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.AssemblyInfo.cs
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.csproj.CoreCompileInputs.cache
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.dll
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.pdb
+D:\BSTU\2 sem\ООП\LAB1\obj\Debug\netcoreapp3.1\LAB1.genruntimeconfig.cache
