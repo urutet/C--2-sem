@@ -28,18 +28,6 @@ namespace LAB1
             textBox.Text += '&';
         }
 
-        private void Hex_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                textBox.Text = calc.ShowInHexagonal(textBox.Text);
-            }
-            catch (FormatException excep)
-            {
-                MessageBox.Show("Wrong format!");
-            }
-        }
-
         private void Or_Click(object sender, EventArgs e)
         {
             textBox.Text += '|';
@@ -50,23 +38,15 @@ namespace LAB1
             textBox.Text += '^';
         }
 
-        private void Binary_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                textBox.Text = calc.ShowInBinary(textBox.Text);
-            }
-            catch (FormatException except)
-            {
-                MessageBox.Show("Wrong format!");
-            }
-        }
-
         private void Equal_Click(object sender, EventArgs e)
         {
             try
             {
                 textBox.Text = calc.Equal(textBox.Text);
+                DEC_value.Text = calc.ShowInDecimal(textBox.Text);
+                BIN_value.Text = calc.ShowInBinary(textBox.Text);
+                OCT_value.Text = calc.ShowInBinary(textBox.Text);
+                HEX_value.Text = calc.ShowInHexagonal(textBox.Text);
             }
             catch (FormatException except)
             {
@@ -81,30 +61,6 @@ namespace LAB1
                 textBox.Text = calc.Not(textBox.Text);
             }
             catch(FormatException excep)
-            {
-                MessageBox.Show("Wrong format!");
-            }
-        }
-
-        private void Oct_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                textBox.Text = calc.ShowInOctagonal(textBox.Text);
-            }
-            catch(FormatException excep)
-            {
-                MessageBox.Show("Wrong format!");
-            }
-        }
-
-        private void Dec_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                textBox.Text = calc.ShowInDecimal(textBox.Text);
-            }
-            catch (FormatException excep)
             {
                 MessageBox.Show("Wrong format!");
             }

@@ -77,7 +77,7 @@ namespace LAB1
             if (str.Contains('^'))
                 return Xor(str);
             else
-                throw new InvalidOperationException();
+                return str;
         }
     }
 }

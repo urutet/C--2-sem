@@ -35,11 +35,15 @@ namespace LAB1
             this.Or = new System.Windows.Forms.Button();
             this.Xor = new System.Windows.Forms.Button();
             this.Not = new System.Windows.Forms.Button();
-            this.Hexagonal = new System.Windows.Forms.Button();
-            this.Binary = new System.Windows.Forms.Button();
-            this.Dec = new System.Windows.Forms.Button();
-            this.Oct = new System.Windows.Forms.Button();
             this.Equal = new System.Windows.Forms.Button();
+            this.HEX_label = new System.Windows.Forms.Label();
+            this.DEC_label = new System.Windows.Forms.Label();
+            this.BIN_label = new System.Windows.Forms.Label();
+            this.OCT_label = new System.Windows.Forms.Label();
+            this.DEC_value = new System.Windows.Forms.Label();
+            this.BIN_value = new System.Windows.Forms.Label();
+            this.OCT_value = new System.Windows.Forms.Label();
+            this.HEX_value = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBox
@@ -54,7 +58,7 @@ namespace LAB1
             // 
             this.Clear.BackColor = System.Drawing.Color.DarkOrange;
             this.Clear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Clear.Location = new System.Drawing.Point(187, 187);
+            this.Clear.Location = new System.Drawing.Point(99, 255);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(81, 59);
             this.Clear.TabIndex = 1;
@@ -64,7 +68,7 @@ namespace LAB1
             // 
             // And
             // 
-            this.And.Location = new System.Drawing.Point(274, 187);
+            this.And.Location = new System.Drawing.Point(186, 255);
             this.And.Name = "And";
             this.And.Size = new System.Drawing.Size(81, 58);
             this.And.TabIndex = 2;
@@ -74,7 +78,7 @@ namespace LAB1
             // 
             // Or
             // 
-            this.Or.Location = new System.Drawing.Point(361, 186);
+            this.Or.Location = new System.Drawing.Point(273, 254);
             this.Or.Name = "Or";
             this.Or.Size = new System.Drawing.Size(81, 58);
             this.Or.TabIndex = 3;
@@ -84,7 +88,7 @@ namespace LAB1
             // 
             // Xor
             // 
-            this.Xor.Location = new System.Drawing.Point(448, 186);
+            this.Xor.Location = new System.Drawing.Point(360, 254);
             this.Xor.Name = "Xor";
             this.Xor.Size = new System.Drawing.Size(81, 58);
             this.Xor.TabIndex = 4;
@@ -94,53 +98,13 @@ namespace LAB1
             // 
             // Not
             // 
-            this.Not.Location = new System.Drawing.Point(535, 187);
+            this.Not.Location = new System.Drawing.Point(447, 255);
             this.Not.Name = "Not";
             this.Not.Size = new System.Drawing.Size(81, 57);
             this.Not.TabIndex = 5;
             this.Not.Text = "~";
             this.Not.UseVisualStyleBackColor = true;
             this.Not.Click += new System.EventHandler(this.Not_Click);
-            // 
-            // Hexagonal
-            // 
-            this.Hexagonal.Location = new System.Drawing.Point(448, 254);
-            this.Hexagonal.Name = "Hexagonal";
-            this.Hexagonal.Size = new System.Drawing.Size(81, 57);
-            this.Hexagonal.TabIndex = 6;
-            this.Hexagonal.Text = "HEX";
-            this.Hexagonal.UseVisualStyleBackColor = true;
-            this.Hexagonal.Click += new System.EventHandler(this.Hex_Click);
-            // 
-            // Binary
-            // 
-            this.Binary.Location = new System.Drawing.Point(187, 253);
-            this.Binary.Name = "Binary";
-            this.Binary.Size = new System.Drawing.Size(81, 58);
-            this.Binary.TabIndex = 7;
-            this.Binary.Text = "BIN";
-            this.Binary.UseVisualStyleBackColor = true;
-            this.Binary.Click += new System.EventHandler(this.Binary_Click);
-            // 
-            // Dec
-            // 
-            this.Dec.Location = new System.Drawing.Point(361, 253);
-            this.Dec.Name = "Dec";
-            this.Dec.Size = new System.Drawing.Size(81, 57);
-            this.Dec.TabIndex = 8;
-            this.Dec.Text = "DEC";
-            this.Dec.UseVisualStyleBackColor = true;
-            this.Dec.Click += new System.EventHandler(this.Dec_Click);
-            // 
-            // Oct
-            // 
-            this.Oct.Location = new System.Drawing.Point(274, 254);
-            this.Oct.Name = "Oct";
-            this.Oct.Size = new System.Drawing.Size(81, 57);
-            this.Oct.TabIndex = 9;
-            this.Oct.Text = "OCT";
-            this.Oct.UseVisualStyleBackColor = true;
-            this.Oct.Click += new System.EventHandler(this.Oct_Click);
             // 
             // Equal
             // 
@@ -152,16 +116,92 @@ namespace LAB1
             this.Equal.UseVisualStyleBackColor = true;
             this.Equal.Click += new System.EventHandler(this.Equal_Click);
             // 
+            // HEX_label
+            // 
+            this.HEX_label.AutoSize = true;
+            this.HEX_label.Location = new System.Drawing.Point(58, 169);
+            this.HEX_label.Name = "HEX_label";
+            this.HEX_label.Size = new System.Drawing.Size(45, 25);
+            this.HEX_label.TabIndex = 11;
+            this.HEX_label.Text = "HEX";
+            // 
+            // DEC_label
+            // 
+            this.DEC_label.AutoSize = true;
+            this.DEC_label.Location = new System.Drawing.Point(58, 94);
+            this.DEC_label.Name = "DEC_label";
+            this.DEC_label.Size = new System.Drawing.Size(45, 25);
+            this.DEC_label.TabIndex = 12;
+            this.DEC_label.Text = "DEC";
+            // 
+            // BIN_label
+            // 
+            this.BIN_label.AutoSize = true;
+            this.BIN_label.Location = new System.Drawing.Point(58, 119);
+            this.BIN_label.Name = "BIN_label";
+            this.BIN_label.Size = new System.Drawing.Size(40, 25);
+            this.BIN_label.TabIndex = 13;
+            this.BIN_label.Text = "BIN";
+            // 
+            // OCT_label
+            // 
+            this.OCT_label.AutoSize = true;
+            this.OCT_label.Location = new System.Drawing.Point(58, 144);
+            this.OCT_label.Name = "OCT_label";
+            this.OCT_label.Size = new System.Drawing.Size(46, 25);
+            this.OCT_label.TabIndex = 14;
+            this.OCT_label.Text = "OCT";
+            // 
+            // DEC_value
+            // 
+            this.DEC_value.AutoSize = true;
+            this.DEC_value.Location = new System.Drawing.Point(123, 94);
+            this.DEC_value.Name = "DEC_value";
+            this.DEC_value.Size = new System.Drawing.Size(19, 25);
+            this.DEC_value.TabIndex = 15;
+            this.DEC_value.Text = "_";
+            // 
+            // BIN_value
+            // 
+            this.BIN_value.AutoSize = true;
+            this.BIN_value.Location = new System.Drawing.Point(123, 119);
+            this.BIN_value.Name = "BIN_value";
+            this.BIN_value.Size = new System.Drawing.Size(19, 25);
+            this.BIN_value.TabIndex = 16;
+            this.BIN_value.Text = "_";
+            // 
+            // OCT_value
+            // 
+            this.OCT_value.AutoSize = true;
+            this.OCT_value.Location = new System.Drawing.Point(121, 144);
+            this.OCT_value.Name = "OCT_value";
+            this.OCT_value.Size = new System.Drawing.Size(19, 25);
+            this.OCT_value.TabIndex = 17;
+            this.OCT_value.Text = "_";
+            // 
+            // HEX_value
+            // 
+            this.HEX_value.AutoSize = true;
+            this.HEX_value.Location = new System.Drawing.Point(121, 173);
+            this.HEX_value.Name = "HEX_value";
+            this.HEX_value.Size = new System.Drawing.Size(19, 25);
+            this.HEX_value.TabIndex = 18;
+            this.HEX_value.Text = "_";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HEX_value);
+            this.Controls.Add(this.OCT_value);
+            this.Controls.Add(this.BIN_value);
+            this.Controls.Add(this.DEC_value);
+            this.Controls.Add(this.OCT_label);
+            this.Controls.Add(this.BIN_label);
+            this.Controls.Add(this.DEC_label);
+            this.Controls.Add(this.HEX_label);
             this.Controls.Add(this.Equal);
-            this.Controls.Add(this.Oct);
-            this.Controls.Add(this.Dec);
-            this.Controls.Add(this.Binary);
-            this.Controls.Add(this.Hexagonal);
             this.Controls.Add(this.Not);
             this.Controls.Add(this.Xor);
             this.Controls.Add(this.Or);
@@ -183,12 +223,16 @@ namespace LAB1
         private System.Windows.Forms.Button OrSt;
         private System.Windows.Forms.Button Xor;
         private System.Windows.Forms.Button Not;
-        private System.Windows.Forms.Button Hexagonal;
-        private System.Windows.Forms.Button Binary;
-        private System.Windows.Forms.Button Dec;
-        private System.Windows.Forms.Button Oct;
         private System.Windows.Forms.Button Or;
         private System.Windows.Forms.Button Equal;
+        private System.Windows.Forms.Label HEX_label;
+        private System.Windows.Forms.Label DEC_label;
+        private System.Windows.Forms.Label BIN_label;
+        private System.Windows.Forms.Label OCT_label;
+        private System.Windows.Forms.Label DEC_value;
+        private System.Windows.Forms.Label BIN_value;
+        private System.Windows.Forms.Label OCT_value;
+        private System.Windows.Forms.Label HEX_value;
     }
 }
 
