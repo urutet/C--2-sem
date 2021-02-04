@@ -13,7 +13,7 @@ namespace LAB1
     public partial class Form1 : Form
     {
         Calculator calc = new Calculator();
-
+        
         public Form1()
         {
             InitializeComponent();
@@ -30,7 +30,14 @@ namespace LAB1
 
         private void Hex_Click(object sender, EventArgs e)
         {
-            textBox.Text = calc.ShowInHexagonal(textBox.Text);
+            try
+            {
+                textBox.Text = calc.ShowInHexagonal(textBox.Text);
+            }
+            catch (FormatException excep)
+            {
+                MessageBox.Show("Wrong format!");
+            }
         }
 
         private void Or_Click(object sender, EventArgs e)
@@ -45,27 +52,62 @@ namespace LAB1
 
         private void Binary_Click(object sender, EventArgs e)
         {
-            textBox.Text = calc.ShowInBinary(textBox.Text);
+            try
+            {
+                textBox.Text = calc.ShowInBinary(textBox.Text);
+            }
+            catch (FormatException except)
+            {
+                MessageBox.Show("Wrong format!");
+            }
         }
 
         private void Equal_Click(object sender, EventArgs e)
         {
-            textBox.Text = calc.Equal(textBox.Text);
+            try
+            {
+                textBox.Text = calc.Equal(textBox.Text);
+            }
+            catch (FormatException except)
+            {
+                MessageBox.Show("Wrong format!");
+            }
         }
 
         private void Not_Click(object sender, EventArgs e)
         {
-            textBox.Text = calc.Not(textBox.Text);
+            try
+            {
+                textBox.Text = calc.Not(textBox.Text);
+            }
+            catch(FormatException excep)
+            {
+                MessageBox.Show("Wrong format!");
+            }
         }
 
         private void Oct_Click(object sender, EventArgs e)
         {
-            textBox.Text = calc.ShowInOctagonal(textBox.Text);
+            try
+            {
+                textBox.Text = calc.ShowInOctagonal(textBox.Text);
+            }
+            catch(FormatException excep)
+            {
+                MessageBox.Show("Wrong format!");
+            }
         }
 
         private void Dec_Click(object sender, EventArgs e)
         {
-            textBox.Text = calc.ShowInDecimal(textBox.Text);
+            try
+            {
+                textBox.Text = calc.ShowInDecimal(textBox.Text);
+            }
+            catch (FormatException excep)
+            {
+                MessageBox.Show("Wrong format!");
+            }
         }
     }
 }
