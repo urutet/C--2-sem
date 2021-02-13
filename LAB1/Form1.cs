@@ -22,6 +22,10 @@ namespace LAB1
         private void Clear_Click(object sender, EventArgs e)
         {
             textBox.Text = calc.Clear();
+            DEC_value.Text = calc.Clear();
+            BIN_value.Text = calc.Clear();
+            OCT_value.Text = calc.Clear();
+            HEX_value.Text = calc.Clear();
         }
         private void And_Click(object sender, EventArgs e)
         {
