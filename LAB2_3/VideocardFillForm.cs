@@ -10,7 +10,7 @@ namespace LAB2_3
 {
     public partial class VideocardFillForm : Form
     {
-        public J form1Link;
+        public ITLabForm form1Link;
 
         public VideocardFillForm()
         {

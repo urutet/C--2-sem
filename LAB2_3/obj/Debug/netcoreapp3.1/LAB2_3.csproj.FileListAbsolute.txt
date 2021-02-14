@@ -16,4 +16,4 @@ D:\BSTU\2 sem\ООП\LAB2_3\obj\Debug\netcoreapp3.1\LAB2_3.ProcessorFillForm.res
 D:\BSTU\2 sem\ООП\LAB2_3\obj\Debug\netcoreapp3.1\LAB2_3.VideocardFillForm.resources
 D:\BSTU\2 sem\ООП\LAB2_3\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\BSTU\2 sem\ООП\LAB2_3\obj\Debug\netcoreapp3.1\LAB2_3.csproj.CopyComplete
-D:\BSTU\2 sem\ООП\LAB2_3\obj\Debug\netcoreapp3.1\LAB2_3.J.resources
+D:\BSTU\2 sem\ООП\LAB2_3\obj\Debug\netcoreapp3.1\LAB2_3.ITLabForm.resources

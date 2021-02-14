@@ -10,7 +10,7 @@ namespace LAB2_3
 {
     public partial class ProcessorFillForm : Form
     {
-        public J form1Link;
+        public ITLabForm form1Link;
 
         public ProcessorFillForm()
         {

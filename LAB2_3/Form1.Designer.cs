@@ -1,7 +1,7 @@
 ﻿
 namespace LAB2_3
 {
-    partial class J
+    partial class ITLabForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -74,6 +74,7 @@ namespace LAB2_3
             this.HDDSizeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateOfPurchase = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JSONSerializeButton = new System.Windows.Forms.Button();
+            this.JSONDeserializer = new System.Windows.Forms.Button();
             this.RAMTypeGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RAMSizeTrackBar)).BeginInit();
             this.DiskTypeGroup.SuspendLayout();
@@ -310,7 +311,7 @@ namespace LAB2_3
             // 
             // ComputerAddButton
             // 
-            this.ComputerAddButton.Location = new System.Drawing.Point(402, 494);
+            this.ComputerAddButton.Location = new System.Drawing.Point(750, 494);
             this.ComputerAddButton.Name = "ComputerAddButton";
             this.ComputerAddButton.Size = new System.Drawing.Size(243, 34);
             this.ComputerAddButton.TabIndex = 19;
@@ -468,7 +469,7 @@ namespace LAB2_3
             // 
             // JSONSerializeButton
             // 
-            this.JSONSerializeButton.Location = new System.Drawing.Point(745, 494);
+            this.JSONSerializeButton.Location = new System.Drawing.Point(13, 494);
             this.JSONSerializeButton.Name = "JSONSerializeButton";
             this.JSONSerializeButton.Size = new System.Drawing.Size(226, 34);
             this.JSONSerializeButton.TabIndex = 21;
@@ -476,11 +477,22 @@ namespace LAB2_3
             this.JSONSerializeButton.UseVisualStyleBackColor = true;
             this.JSONSerializeButton.Click += new System.EventHandler(this.JSONSerializeButton_Click);
             // 
-            // J
+            // JSONDeserializer
+            // 
+            this.JSONDeserializer.Location = new System.Drawing.Point(406, 494);
+            this.JSONDeserializer.Name = "JSONDeserializer";
+            this.JSONDeserializer.Size = new System.Drawing.Size(265, 34);
+            this.JSONDeserializer.TabIndex = 22;
+            this.JSONDeserializer.Text = "Десериализовать из JSON";
+            this.JSONDeserializer.UseVisualStyleBackColor = true;
+            this.JSONDeserializer.Click += new System.EventHandler(this.JSONDeserializer_Click);
+            // 
+            // ITLabForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 808);
+            this.Controls.Add(this.JSONDeserializer);
             this.Controls.Add(this.JSONSerializeButton);
             this.Controls.Add(this.LabGrid);
             this.Controls.Add(this.ComputerAddButton);
@@ -503,7 +515,7 @@ namespace LAB2_3
             this.Controls.Add(this.ProcessorLabel);
             this.Controls.Add(this.ComputerTypeLabel);
             this.Controls.Add(this.ComputerTypeBox);
-            this.Name = "J";
+            this.Name = "ITLabForm";
             this.Text = "IT Лаборатория";
             this.RAMTypeGroupBox.ResumeLayout(false);
             this.RAMTypeGroupBox.PerformLayout();
@@ -569,6 +581,7 @@ namespace LAB2_3
         private System.Windows.Forms.DataGridViewTextBoxColumn HDDSizeCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateOfPurchase;
         private System.Windows.Forms.Button JSONSerializeButton;
+        private System.Windows.Forms.Button JSONDeserializer;
     }
 }
 

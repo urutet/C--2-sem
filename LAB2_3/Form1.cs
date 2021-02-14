@@ -12,11 +12,11 @@ using System.IO;
 
 namespace LAB2_3
 {
-    public partial class J : Form
+    public partial class ITLabForm : Form
     {
         List<Computer> computers = new List<Computer>();
 
-        public J()
+        public ITLabForm()
         {
             InitializeComponent();
         }
@@ -51,8 +51,8 @@ namespace LAB2_3
                 if ((SSDSizeTextBox.Text == "" ||
                     SSDSizeTextBox.Text == null) && SSDCheckBox.Checked)
                     SSDSizeError.SetError(this.SSDSizeTextBox, "Введите значение!");
-                /*if (ComputerTypeBox.SelectedValue == null)
-                    ComputerTypeError.SetError(this.ComputerTypeBox, "Заполните поле!");*/
+                if (ComputerTypeBox.SelectedItem == null)
+                    ComputerTypeError.SetError(this.ComputerTypeBox, "Заполните поле!");
                 else
                 {
                     Computer computer = new Computer();
@@ -72,12 +72,19 @@ namespace LAB2_3
                     computer.dateOfPurchase = DateOfPurchasePicker.Value;
 
                     computers.Add(computer);
-                LabGrid.Rows.Add(computer.computerType, computer.processor.ToString(),
-                    computer.processor.baseClock, computer.processor.numberOfCores,
-                    computer.processor.l1_3CacheSize, computer.RAMType,
-                    computer.RAMSizeGB, computer.videocard.ToString(),
-                    computer.videocard.VRAMSizeGB, computer.videocard.DirectX11Support,
-                    computer.SSDdiskSizeGB, computer.HDDdiskSizeGB, computer.dateOfPurchase);
+                try
+                {
+                    LabGrid.Rows.Add(computer.computerType, computer.processor.ToString(),
+                        computer.processor.baseClock, computer.processor.numberOfCores,
+                        computer.processor.l1_3CacheSize, computer.RAMType,
+                        computer.RAMSizeGB, computer.videocard.ToString(),
+                        computer.videocard.VRAMSizeGB, computer.videocard.DirectX11Support,
+                        computer.SSDdiskSizeGB, computer.HDDdiskSizeGB, computer.dateOfPurchase);
+                }
+                catch
+                {
+                    MessageBox.Show("Заполните все поля!");
+                }
                     
 
                 }
@@ -103,14 +110,61 @@ namespace LAB2_3
 
         private void JSONSerializeButton_Click(object sender, EventArgs e)
         {
-            using(StreamWriter sw = new StreamWriter(@$"D:\BSTU\2 sem\ООП\LAB2_3\lab2_3.json", true))
-                    {
+            if (computers.Count == 0)
+            {
+                MessageBox.Show("Список компьютеров пуст!");
+            }
+            else
+            {
+                Stream SaveStream;
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.InitialDirectory = "D:\\BSTU\\2 sem\\ООП\\LAB2_3";
+
+                saveFileDialog.Filter = "json files (*.json)|*.json";
+                saveFileDialog.FilterIndex = 2;
+                saveFileDialog.RestoreDirectory = true;
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
                         foreach (var computer in computers)
                         {
-                            string serialize = JsonConvert.SerializeObject(computer);
-                            sw.Write(serialize);
+                            SerializerClass.SerializeJSON<Computer>(saveFileDialog.FileName, computer);
                         }
+                }
+            }
+            
+        }
+
+        private void JSONDeserializer_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "D:\\BSTU\\2 sem\\ООП\\LAB2_3";
+                openFileDialog.Filter = "json files (*.json)|*.json";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    //Get the path of specified file
+                    string filePath = openFileDialog.FileName;
+
+                    List<Computer> computersFromJson = new List<Computer>();
+                    computersFromJson = SerializerClass.DeserializeJSON<List<Computer>>(filePath); //НЕВОЗМОЖНО ПРЕОБРАЗОВАТЬ В СПИСОК
+                    
+                    computers = computers.Concat(computersFromJson).ToList();                       
+                    foreach(var computer in computersFromJson)
+                    {
+                        LabGrid.Rows.Add(computer.computerType, computer.processor.ToString(),
+                       computer.processor.baseClock, computer.processor.numberOfCores,
+                       computer.processor.l1_3CacheSize, computer.RAMType,
+                       computer.RAMSizeGB, computer.videocard.ToString(),
+                       computer.videocard.VRAMSizeGB, computer.videocard.DirectX11Support,
+                       computer.SSDdiskSizeGB, computer.HDDdiskSizeGB, computer.dateOfPurchase);
                     }
+                }
+            }
+            
         }
     }
 }
