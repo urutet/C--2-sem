@@ -12,7 +12,7 @@ namespace LAB2_3
         {
             using (StreamWriter sw = new StreamWriter(path, true))
             {
-                    string serialize = JsonConvert.SerializeObject(obj);
+                    string serialize = JsonConvert.SerializeObject(obj, Formatting.Indented);
                     sw.Write(serialize);
 
                     sw.Close();

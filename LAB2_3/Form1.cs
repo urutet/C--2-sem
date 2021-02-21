@@ -126,10 +126,7 @@ namespace LAB2_3
 
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                        foreach (var computer in computers)
-                        {
-                            SerializerClass.SerializeJSON<Computer>(saveFileDialog.FileName, computer);
-                        }
+                            SerializerClass.SerializeJSON<List<Computer>>(saveFileDialog.FileName, computers);
                 }
             }
             

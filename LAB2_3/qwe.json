@@ -1,0 +1,106 @@
+[
+  {
+    "computerType": 0,
+    "videocard": {
+      "manufacturer": 1,
+      "Series": "123123",
+      "Model": "12311",
+      "baseClock": "1231",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 21,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 1231,
+    "dateOfPurchase": "2021-02-17T11:44:50.5703414+03:00",
+    "processor": {
+      "manufacturer": 1,
+      "Series": "231",
+      "Model": "1231",
+      "numberOfCores": 11,
+      "baseClock": 123123.0,
+      "maxClock": 123112.0,
+      "architecture": 1,
+      "l1_3CacheSize": 1231
+    }
+  },
+  {
+    "computerType": 2,
+    "videocard": {
+      "manufacturer": 1,
+      "Series": "123123",
+      "Model": "12311",
+      "baseClock": "1231",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 21,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 1231,
+    "dateOfPurchase": "2021-02-17T11:44:50.5703414+03:00",
+    "processor": {
+      "manufacturer": 1,
+      "Series": "231",
+      "Model": "1231",
+      "numberOfCores": 11,
+      "baseClock": 123123.0,
+      "maxClock": 123112.0,
+      "architecture": 1,
+      "l1_3CacheSize": 1231
+    }
+  },
+  {
+    "computerType": 2,
+    "videocard": {
+      "manufacturer": 1,
+      "Series": "123123",
+      "Model": "12311",
+      "baseClock": "1231",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 21,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 1231,
+    "dateOfPurchase": "2021-02-17T11:44:50.5703414+03:00",
+    "processor": {
+      "manufacturer": 1,
+      "Series": "231",
+      "Model": "1231",
+      "numberOfCores": 11,
+      "baseClock": 123123.0,
+      "maxClock": 123112.0,
+      "architecture": 1,
+      "l1_3CacheSize": 1231
+    }
+  },
+  {
+    "computerType": 2,
+    "videocard": {
+      "manufacturer": 1,
+      "Series": "123123",
+      "Model": "12311",
+      "baseClock": "1231",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 21,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 1231,
+    "dateOfPurchase": "2021-02-17T11:44:50.5703414+03:00",
+    "processor": {
+      "manufacturer": 1,
+      "Series": "231",
+      "Model": "1231",
+      "numberOfCores": 11,
+      "baseClock": 123123.0,
+      "maxClock": 123112.0,
+      "architecture": 1,
+      "l1_3CacheSize": 1231
+    }
+  }
+]

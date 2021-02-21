@@ -1,0 +1,158 @@
+[
+  {
+    "computerType": 1,
+    "videocard": {
+      "manufacturer": 2,
+      "Series": "123",
+      "Model": "123",
+      "baseClock": "123",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 16,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 123,
+    "dateOfPurchase": "2021-02-18T17:40:57.0780989+03:00",
+    "processor": {
+      "manufacturer": 0,
+      "Series": "Haskell",
+      "Model": "Core i7 4700K",
+      "numberOfCores": 4,
+      "baseClock": 123.0,
+      "maxClock": 123.0,
+      "architecture": 1,
+      "l1_3CacheSize": 123
+    }
+  },
+  {
+    "computerType": 1,
+    "videocard": {
+      "manufacturer": 2,
+      "Series": "123",
+      "Model": "123",
+      "baseClock": "123",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 16,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 123,
+    "dateOfPurchase": "2021-02-18T17:40:57.0780989+03:00",
+    "processor": {
+      "manufacturer": 0,
+      "Series": "Haskell",
+      "Model": "Core i7 4700K",
+      "numberOfCores": 4,
+      "baseClock": 123.0,
+      "maxClock": 123.0,
+      "architecture": 1,
+      "l1_3CacheSize": 123
+    }
+  },
+  {
+    "computerType": 1,
+    "videocard": {
+      "manufacturer": 2,
+      "Series": "123",
+      "Model": "123",
+      "baseClock": "123",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 16,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 123,
+    "dateOfPurchase": "2021-02-18T17:40:57.0780989+03:00",
+    "processor": {
+      "manufacturer": 0,
+      "Series": "Haskell",
+      "Model": "Core i7 4700K",
+      "numberOfCores": 4,
+      "baseClock": 123.0,
+      "maxClock": 123.0,
+      "architecture": 1,
+      "l1_3CacheSize": 123
+    }
+  },
+  {
+    "computerType": 1,
+    "videocard": {
+      "manufacturer": 2,
+      "Series": "123",
+      "Model": "123",
+      "baseClock": "123",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 16,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 123,
+    "dateOfPurchase": "2021-02-18T17:40:57.0780989+03:00",
+    "processor": {
+      "manufacturer": 1,
+      "Series": "Zen2",
+      "Model": "Ryzen 5 4500U",
+      "numberOfCores": 4,
+      "baseClock": 123.0,
+      "maxClock": 123.0,
+      "architecture": 1,
+      "l1_3CacheSize": 123
+    }
+  },
+  {
+    "computerType": 1,
+    "videocard": {
+      "manufacturer": 2,
+      "Series": "123",
+      "Model": "123",
+      "baseClock": "123",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 16,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 123,
+    "dateOfPurchase": "2021-02-18T17:40:57.0780989+03:00",
+    "processor": {
+      "manufacturer": 1,
+      "Series": "Zen2",
+      "Model": "Ryzen 5 4500U",
+      "numberOfCores": 4,
+      "baseClock": 123.0,
+      "maxClock": 123.0,
+      "architecture": 1,
+      "l1_3CacheSize": 123
+    }
+  },
+  {
+    "computerType": 1,
+    "videocard": {
+      "manufacturer": 2,
+      "Series": "123",
+      "Model": "123",
+      "baseClock": "123",
+      "DirectX11Support": true,
+      "VRAMSizeGB": 6
+    },
+    "RAMSizeGB": 16,
+    "RAMType": "DDR4",
+    "SSDdiskSizeGB": 0,
+    "HDDdiskSizeGB": 123,
+    "dateOfPurchase": "2021-02-18T17:40:57.0780989+03:00",
+    "processor": {
+      "manufacturer": 1,
+      "Series": "Zen2",
+      "Model": "Ryzen 5 4500U",
+      "numberOfCores": 4,
+      "baseClock": 123.0,
+      "maxClock": 123.0,
+      "architecture": 1,
+      "l1_3CacheSize": 123
+    }
+  }
+]
