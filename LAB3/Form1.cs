@@ -50,25 +50,32 @@ namespace LAB2_3
 
         private void ComputerAddButton_Click(object sender, EventArgs e)
         {
+
+            if (!DDR3Radio.Checked && !DDR4Radio.Checked)
+                RAMTypeError.SetError(this.RAMTypeGroupBox, "Выберите значение!");
+            if ((HDDSizeTextBox.Text == "" ||
+                HDDSizeTextBox.Text == null) && HDDCheckBox.Checked)
+                HDDSizeError.SetError(this.HDDSizeTextBox, "Введите значение!");
+            if ((SSDSizeTextBox.Text == "" ||
+                SSDSizeTextBox.Text == null) && SSDCheckBox.Checked)
+                SSDSizeError.SetError(this.SSDSizeTextBox, "Введите значение!");
+            if (ComputerTypeBox.SelectedItem == null)
+                ComputerTypeError.SetError(this.ComputerTypeBox, "Заполните поле!");
+            else
+            {
+
+
+
+                Computer computer = new Computer();
+
             
-                if (!DDR3Radio.Checked && !DDR4Radio.Checked)
-                    RAMTypeError.SetError(this.RAMTypeGroupBox, "Выберите значение!");
-                if ((HDDSizeTextBox.Text == "" ||
-                    HDDSizeTextBox.Text == null) && HDDCheckBox.Checked)
-                    HDDSizeError.SetError(this.HDDSizeTextBox, "Введите значение!");
-                if ((SSDSizeTextBox.Text == "" ||
-                    SSDSizeTextBox.Text == null) && SSDCheckBox.Checked)
-                    SSDSizeError.SetError(this.SSDSizeTextBox, "Введите значение!");
-                if (ComputerTypeBox.SelectedItem == null)
-                    ComputerTypeError.SetError(this.ComputerTypeBox, "Заполните поле!");
-                else
-                {
-                    Computer computer = new Computer();
-                    computer.computerType = (Computer.ComputerType)Enum.Parse(typeof(Computer.ComputerType), ComputerTypeBox.SelectedItem.ToString());
-                    computer.processor = (Processor)ProcessorComboBox.SelectedItem;
+            computer.computerType = (Computer.ComputerType)Enum.Parse(typeof(Computer.ComputerType), ComputerTypeBox.SelectedItem.ToString());
+            computer.processor = (Processor)ProcessorComboBox.SelectedItem;
                     computer.videocard = (Videocard)VideocardComboBox.SelectedItem;
 
-                    if (DDR3Radio.Checked)
+            
+
+            if (DDR3Radio.Checked)
                         computer.RAMType = "DDR3";
                     else
                         computer.RAMType = "DDR4";
@@ -79,36 +86,41 @@ namespace LAB2_3
                         computer.SSDdiskSizeGB = Convert.ToInt32(SSDSizeTextBox.Text);
                     computer.dateOfPurchase = DateOfPurchasePicker.Value;
 
-                var results = new List<ValidationResult>();
-                var context = new ValidationContext(computer);
 
-                //Не лучший метод (стоило бы использовать TryValidateField()
-                if (!Validator.TryValidateObject(computer, context, results, true))
+
+            //Не лучший метод (стоило бы использовать TryValidateField())
+            var results = new List<ValidationResult>();
+            var context = new ValidationContext(computer);
+
+            if (!Validator.TryValidateObject(computer, context, results, true))
+            {
+                using (StreamWriter sw = new StreamWriter("lab3.txt", true))
                 {
                     foreach (var error in results)
                     {
-                        MessageBox.Show(error.ErrorMessage);
+                        sw.WriteLine(error);
                     }
                 }
+            }
 
-                computers.Add(computer);
-                    try
-                    {
-                        LabGrid.Rows.Add(computer.computerType, computer.processor.ToString(),
+            computers.Add(computer);
+            try
+            {
+                    LabGrid.Rows.Add(computer.computerType, computer.processor.ToString(),
                             computer.processor.baseClock, computer.processor.numberOfCores,
                             computer.processor.l1_3CacheSize, computer.RAMType,
                             computer.RAMSizeGB, computer.videocard.ToString(),
                             computer.videocard.VRAMSizeGB, computer.videocard.DirectX11Support,
                             computer.SSDdiskSizeGB, computer.HDDdiskSizeGB, computer.dateOfPurchase);
-                    }
-                    catch
-                    {
-                        MessageBox.Show("Заполните все поля!");
-                    }
-                
+            }
+            catch
+            {
+                MessageBox.Show("Заполните все поля!");
+            }
 
-                }
-            LastMoveLabel.Text = "Последнее действие: добавление компьютера";
+
+        }
+        LastMoveLabel.Text = "Последнее действие: добавление компьютера";
             ItemsCountLabel.Text = $"Количество объектов: {computers.Count}";
 
 

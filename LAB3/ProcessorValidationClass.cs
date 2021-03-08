@@ -12,7 +12,7 @@ namespace LAB2_3
             if (value != null)
             {
                 string processorName = value.ToString();
-                if (processorName.Contains("AMD") || processorName.Contains("AMD"))
+                if (processorName.Contains("AMD") || processorName.Contains("Intel"))
                     return true;
                 else this.ErrorMessage = "Процессора не существует";
             }

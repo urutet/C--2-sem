@@ -49,6 +49,7 @@ namespace LAB2_3
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
+            LabGrid.Rows.Clear();
             if(ManufacturerCheckBox.Checked && ModelCheckBox.Checked)
             {
                     computersSearched = Search.RangeSearch(allComputers, this);

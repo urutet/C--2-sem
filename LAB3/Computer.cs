@@ -24,7 +24,7 @@ namespace LAB2_3
         [Required(ErrorMessage = "Укажите объем ОЗУ")]
         public int RAMSizeGB { get; set; }
 
-        [Required(ErrorMessage = "Укажите тип ОЗУ"), RegularExpression("DDR[1-3]")]
+        [Required(ErrorMessage = "Укажите тип ОЗУ"), RegularExpression("DDR[1-4]")]
         public string RAMType { get; set; }
 
         [Required(ErrorMessage = "Укажите объем SSD", AllowEmptyStrings = true)]
@@ -110,14 +110,14 @@ namespace LAB2_3
                 el.processor.Model == Model).ToList();
                 return SearchResult;
             }
-            if (searchForm.ManufacturerCheckBox.Checked && !searchForm.ModelCheckBox.Checked)
+            else if (searchForm.ManufacturerCheckBox.Checked && !searchForm.ModelCheckBox.Checked)
             {
                 var SearchResult = computers.Where(el => el.processor.manufacturer == manufacturer).ToList();
                 return SearchResult;
             }
-            if (!searchForm.ManufacturerCheckBox.Checked && searchForm.ModelCheckBox.Checked)
+            else if (!searchForm.ManufacturerCheckBox.Checked && searchForm.ModelCheckBox.Checked)
             {
-                var SearchResult = computers.Where(el => el.processor.Model == Model).ToList();
+                var SearchResult = computers.Where(el => el.processor.Model.Contains(Model)).ToList();
                 return SearchResult;
             }
             else
