@@ -4,13 +4,23 @@ using System.Text;
 
 namespace LAB2_3
 {
-    public class Director
+    public class Director : IObserver
     {
         private PCBuilderBase builderBase;
+        public bool approval { get; set; }
 
         public PCBuilderBase BuilderBase
         {
             set { builderBase = value; }
+        }
+
+        public void Update(object obj)
+        {
+            Computer computer = (Computer)obj;
+            if (computer.processor.Model != null)
+                approval = true;
+            else
+                approval = false;
         }
 
         public void BuildWithoutVideocard()

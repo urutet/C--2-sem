@@ -309,6 +309,10 @@ namespace LAB2_3
                       intelBuilder.GetComputer().RAMSizeGB, "Empty",
                       "Empty", "Empty",
                       intelBuilder.GetComputer().SSDdiskSizeGB, intelBuilder.GetComputer().HDDdiskSizeGB, intelBuilder.GetComputer().dateOfPurchase);
+            amdBuilder.AddObserver(director);
+            amdBuilder.NotifyObservers();
+            if (director.approval)
+                MessageBox.Show("ПК создан верно!");
         }
 
         private void IntelWithVideocard_Click(object sender, EventArgs e)
@@ -324,6 +328,10 @@ namespace LAB2_3
                       intelBuilder.GetComputer().RAMSizeGB, intelBuilder.GetComputer().videocard.ToString(),
                       intelBuilder.GetComputer().videocard.VRAMSizeGB, intelBuilder.GetComputer().videocard.DirectX11Support,
                       intelBuilder.GetComputer().SSDdiskSizeGB, intelBuilder.GetComputer().HDDdiskSizeGB, intelBuilder.GetComputer().dateOfPurchase);
+            amdBuilder.AddObserver(director);
+            amdBuilder.NotifyObservers();
+            if (director.approval)
+                MessageBox.Show("ПК создан верно!");
         }
 
         private void AMDWithoutVideocard_Click(object sender, EventArgs e)
@@ -339,6 +347,10 @@ namespace LAB2_3
                       amdBuilder.GetComputer().RAMSizeGB, "Empty",
                       "Empty", "Empty",
                       amdBuilder.GetComputer().SSDdiskSizeGB, amdBuilder.GetComputer().HDDdiskSizeGB, amdBuilder.GetComputer().dateOfPurchase);
+            amdBuilder.AddObserver(director);
+            amdBuilder.NotifyObservers();
+            if (director.approval)
+                MessageBox.Show("ПК создан верно!");
         }
 
         private void AMDWithVideocard_Click(object sender, EventArgs e)
@@ -354,6 +366,10 @@ namespace LAB2_3
                       amdBuilder.GetComputer().RAMSizeGB, amdBuilder.GetComputer().videocard.ToString(),
                       amdBuilder.GetComputer().videocard.VRAMSizeGB, amdBuilder.GetComputer().videocard.DirectX11Support,
                       amdBuilder.GetComputer().SSDdiskSizeGB, amdBuilder.GetComputer().HDDdiskSizeGB, amdBuilder.GetComputer().dateOfPurchase);
+            amdBuilder.AddObserver(director);
+            amdBuilder.NotifyObservers();
+            if (director.approval)
+                MessageBox.Show("ПК создан верно!");
         }
 
         private void SingletonSettings_Click(object sender, EventArgs e)

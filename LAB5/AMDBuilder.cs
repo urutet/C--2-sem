@@ -4,14 +4,35 @@ using System.Text;
 
 namespace LAB2_3
 {
-    class AMDBuilder : PCBuilderBase
+    class AMDBuilder : PCBuilderBase, IObservable
     {
+        List<IObserver> observers;
+
         public AMDBuilder() : base()
         {
-
+            observers = new List<IObserver>();
         }
 
-public override void BuildProcessor()
+        public void AddObserver(IObserver o)
+        {
+            observers.Add(o);
+        }
+
+        public void RemoveObserver(IObserver o)
+        {
+            observers.Remove(o);
+        }
+
+        public void NotifyObservers()
+        {
+            foreach(var obs in observers)
+            {
+                obs.Update(pc);
+            }
+        }
+
+
+        public override void BuildProcessor()
         {
             this.pc.processor = new Processor();
             this.pc.processor.manufacturer = Processor.Manufacturer.AMD;
