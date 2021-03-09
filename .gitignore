@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+LAB4/obj/Debug/netcoreapp3.1/LAB2_3.csprojAssemblyReference.cache
