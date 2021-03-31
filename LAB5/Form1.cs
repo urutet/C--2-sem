@@ -309,8 +309,8 @@ namespace LAB2_3
                       intelBuilder.GetComputer().RAMSizeGB, "Empty",
                       "Empty", "Empty",
                       intelBuilder.GetComputer().SSDdiskSizeGB, intelBuilder.GetComputer().HDDdiskSizeGB, intelBuilder.GetComputer().dateOfPurchase);
-            amdBuilder.AddObserver(director);
-            amdBuilder.NotifyObservers();
+            intelBuilder.AddObserver(director);
+            intelBuilder.NotifyObservers();
             if (director.approval)
                 MessageBox.Show("ПК создан верно!");
         }
@@ -328,8 +328,8 @@ namespace LAB2_3
                       intelBuilder.GetComputer().RAMSizeGB, intelBuilder.GetComputer().videocard.ToString(),
                       intelBuilder.GetComputer().videocard.VRAMSizeGB, intelBuilder.GetComputer().videocard.DirectX11Support,
                       intelBuilder.GetComputer().SSDdiskSizeGB, intelBuilder.GetComputer().HDDdiskSizeGB, intelBuilder.GetComputer().dateOfPurchase);
-            amdBuilder.AddObserver(director);
-            amdBuilder.NotifyObservers();
+            intelBuilder.AddObserver(director);
+            intelBuilder.NotifyObservers();
             if (director.approval)
                 MessageBox.Show("ПК создан верно!");
         }
