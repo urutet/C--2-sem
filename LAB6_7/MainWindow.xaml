@@ -62,25 +62,25 @@
                     <Button Grid.Row="1"
                             x:Name="catalog_button"
                             Click="catalog_button_Click"
-                            Content="{StaticResource Menu_catalog}"
+                            Content="{DynamicResource Menu_catalog}"
                             Style="{DynamicResource ButtonStyle}">
                     </Button>
                     <Button Grid.Row="3"
                             x:Name="add_item_button"
                             Click="add_item_button_Click"
-                            Content="{StaticResource Menu_add}"
+                            Content="{DynamicResource Menu_add}"
                             Style="{DynamicResource ButtonStyle}">
                     </Button>
                     <Button Grid.Row="5"
                             x:Name="settings_button"
                             Click="settings_button_Click"
-                            Content="{StaticResource Menu_settings}"
+                            Content="{DynamicResource Menu_settings}"
                             Style="{DynamicResource ButtonStyle}">
                     </Button>
                     <Button Grid.Row="7"
                             x:Name="serialize_button"
-                            Content="{StaticResource Menu_serialize}"
-                            Style="{DynamicResource ButtonStyle}"
+                            Content="{DynamicResource Menu_serialize}"
+                            Style="{StaticResource ButtonStyle}"
                             Command="{x:Static local:MainWindow.serializeCommand}"
                             CommandParameter="{Binding Source=MainWindow.games}">
                         <Button.CommandBindings>
@@ -91,7 +91,7 @@
                     </Button>
                     <Button Grid.Row="9"
                             x:Name="deserialize_button"
-                            Content="{StaticResource Menu_deserialize}"
+                            Content="{DynamicResource Menu_deserialize}"
                             Style="{DynamicResource ButtonStyle}"
                             Command="{x:Static local:MainWindow.deserializeCommand}"
                             CommandParameter="{Binding Source=MainWindow.games}">

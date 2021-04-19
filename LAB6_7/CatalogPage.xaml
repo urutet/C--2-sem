@@ -11,7 +11,7 @@
     <Grid>
         <Grid Margin="100,0,0,0">
             <TextBlock HorizontalAlignment="Center"
-                       FontSize="20" Text="{StaticResource _GameTag}"
+                       FontSize="20" Text="{DynamicResource _GameTag}"
                        Style="{DynamicResource TextBlockStyle}"></TextBlock>
             <ScrollViewer Margin="0,20,0,0">
                 <StackPanel x:Name="list_panel">
@@ -49,10 +49,11 @@
                                    VerticalAlignment="Center"
                                    Grid.Column="3"
                                    TextWrapping="Wrap" Text="{Binding Path=Price}"></TextBlock>
-                                        <!--<Button x:Name="delete_button"
+                                        <Button x:Name="delete_button"
                                     Margin="5"
                                     Grid.Column="4"
-                                    Style="{DynamicResource ButtonStyle}">X</Button>-->
+                                    Style="{DynamicResource ButtonStyle}"
+                                                Click="delete_button_Click">X</Button>
                                     </Grid>
                                 </StackPanel>
                             </DataTemplate>

@@ -36,5 +36,17 @@ namespace LAB6_7
             ObjectClasses.Game g = (ObjectClasses.Game)GamesControl.SelectedItem;
             MessageBox.Show(g.FullDef);
         }
+
+        private void delete_button_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null)
+            {
+                var pet = button.DataContext as ObjectClasses.Game;
+                mainWindow.games.Remove(pet);
+
+            }
+            else { return; }
+        }
     }
 }

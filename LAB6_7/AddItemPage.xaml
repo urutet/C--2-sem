@@ -24,7 +24,7 @@
                    Grid.Row="0"
                    Grid.Column="0"
                    Margin="0,0,0,130"
-                   Text="{StaticResource Add_name}"
+                   Text="{DynamicResource Add_name}"
                    Style="{DynamicResource TextBlockStyle}">
         </TextBlock>
         <TextBox x:Name="Game_name_textbox" HorizontalAlignment="Center"
@@ -38,7 +38,7 @@
                    Grid.Row="0"
                    Grid.Column="1"
                    Margin="0,0,0,130"
-                   Text="{StaticResource Add_shrtDef}"
+                   Text="{DynamicResource Add_shrtDef}"
                    Style="{DynamicResource TextBlockStyle}">
         </TextBlock>
         <RichTextBox  x:Name="Game_shortDef_textbox" HorizontalAlignment="Center"
@@ -53,7 +53,7 @@
                    Grid.Row="0"
                    Grid.Column="2"
                    Margin="0,0,0,130"
-                   Text="{StaticResource Add_fullDef}"
+                   Text="{DynamicResource Add_fullDef}"
                    Style="{DynamicResource TextBlockStyle}">
         </TextBlock>
         <RichTextBox  x:Name="Game_fullDef_textbox" HorizontalAlignment="Center"
@@ -67,7 +67,7 @@
                    Grid.Row="1"
                    Grid.Column="1"
                    Margin="0,0,0,130"
-                   Text="{StaticResource Add_price}"
+                   Text="{DynamicResource Add_price}"
                    Style="{DynamicResource TextBlockStyle}">
         </TextBlock>
         <TextBox x:Name="Game_price_textbox" HorizontalAlignment="Center"
@@ -85,7 +85,7 @@
                 Margin="50"
                 Width="90"
                 Click="add_game_button_Click"
-                Content="{StaticResource Add_button}"
+                Content="{DynamicResource Add_button}"
                 Style="{DynamicResource ButtonStyle}">
         </Button>
 
@@ -93,7 +93,7 @@
                    Grid.Row="1"
                    Grid.Column="0"
                    Margin="0,0,0,130"
-                   Text="{StaticResource Add_img}"
+                   Text="{DynamicResource Add_img}"
                    Style="{DynamicResource TextBlockStyle}">
         </TextBlock>
         <Image Grid.Row="1"
@@ -109,7 +109,7 @@
                 Margin="10"
                 Width="90"
                 Click="add_image_button_Click"
-                Content="{StaticResource Add_button}"
+                Content="{DynamicResource Add_button}"
                 Style="{DynamicResource ButtonStyle}">
         </Button>
 
