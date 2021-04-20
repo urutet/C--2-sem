@@ -42,8 +42,9 @@ namespace LAB6_7
             var button = sender as Button;
             if (button != null)
             {
-                var pet = button.DataContext as ObjectClasses.Game;
-                mainWindow.games.Remove(pet);
+                var game = button.DataContext as ObjectClasses.Game;
+                mainWindow.gamesMemento = mainWindow.games;
+                mainWindow.games.Remove(game);
 
             }
             else { return; }

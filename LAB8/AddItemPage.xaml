@@ -116,7 +116,11 @@
                 Style="{DynamicResource ButtonStyle}">
         </Button>
 
-        <!--<MyNamespace:CustomControl1/>-->
-        
+        <MyNamespace:CustomControl1 Click="CustomControl1_Click"
+                                    Grid.Row="2"
+                                    Grid.Column="2"
+                                    VerticalAlignment="Stretch"
+                                    HorizontalAlignment="Stretch"/>
+
     </Grid>
 </Page>

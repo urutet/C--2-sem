@@ -19,10 +19,17 @@
         <ResourceDictionary>
             <FrameworkElement x:Key="ArrowCursor" Cursor="d:\bstu\2 курс\2 семестр\ооп 2 сем\lab6_7\arrow.cur"/>
         </ResourceDictionary>
-    </Window.Resources>    
-    
+    </Window.Resources>
+
     
     <Grid x:Name="LayoutGrid">
+        <ToolBar Height="20"
+                 VerticalAlignment="Top">
+            <ToggleButton x:Name="undoBtn" Content="Undo" FontSize="7" Click="undoBtn_Click"/>
+            <Separator/>
+            <ToggleButton x:Name="redoBtn" Content="Redo" FontSize="7" Click="redoBtn_Click" />
+            <Separator/>
+        </ToolBar>
         <!--<TabControl x:Name="MainTabControl">
             <TabItem Header="Каталог">
                 <DataGrid>

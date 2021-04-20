@@ -26,6 +26,7 @@ namespace LAB6_7
     public partial class MainWindow : Window
     {
         public ObservableCollection<ObjectClasses.Game> games { get; set; }
+        public ObservableCollection<ObjectClasses.Game> gamesMemento { get; set; }
         public CatalogPage catalog { get; }
         public AddItemPage addItemPage { get; }
         public SettingsPage settingsPage { get; }
@@ -109,6 +110,20 @@ namespace LAB6_7
         private void DeserializeCommandCanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
             e.CanExecute = true;
+        }
+
+        private void undoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            catalog.GamesControl.ItemsSource = gamesMemento;
+            var view = CollectionViewSource.GetDefaultView(gamesMemento);
+            view.Refresh();
+        }
+
+        private void redoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            catalog.GamesControl.ItemsSource = games;
+            var view = CollectionViewSource.GetDefaultView(games);
+            view.Refresh();
         }
     }
 }

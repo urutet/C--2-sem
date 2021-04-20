@@ -42,7 +42,7 @@ namespace LAB6_7
     ///     <MyNamespace:CustomControl1/>
     ///
     /// </summary>
-    public class CustomControl1 : Control
+    public class CustomControl1 : Button
     {
         static CustomControl1()
         {

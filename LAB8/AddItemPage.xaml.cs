@@ -41,6 +41,7 @@ namespace LAB6_7
             ObjectClasses.Game game = new ObjectClasses.Game(Game_name_textbox.Text, shrtDef.Text,
                 fullDef.Text, Convert.ToDouble(Game_price_textbox.Text), image);
             
+            mainWindow.gamesMemento = mainWindow.games;
             mainWindow.games.Add(game);
 
             this.NavigationService.Navigate(mainWindow.catalog);
@@ -67,6 +68,11 @@ namespace LAB6_7
         private void Game_price_textbox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = !int.TryParse(e.Text, out int i);
+        }
+
+        private void CustomControl1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("You've just triggered hidden custom control!");
         }
     }
 }
