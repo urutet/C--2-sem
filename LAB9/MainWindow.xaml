@@ -1,0 +1,35 @@
+﻿<Window x:Class="LAB9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB9"
+        xmlns:ns="clr-namespace:LAB9.User_Controls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:SomeObj x:Key="obj" Title="qwerty" Price="10"/>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="local:ExitRoutedUICommand.Exit" Executed="Exit_Executed"/>
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Command="local:ExitRoutedUICommand.Exit"
+              Gesture="CTRL+Q" />
+    </Window.InputBindings>
+    <Grid DataContext="{StaticResource obj}">
+        <ns:WatermarkTextBox Height="20" VerticalAlignment="Top" Watermark="Title" TextBind="{Binding Title, Mode=TwoWay}"/>
+        <ns:WatermarkTextBox Height="20" VerticalAlignment="Top" Margin="0, 25, 0, 0" Watermark="Price" TextBind="{Binding Price, Mode=TwoWay}"/>
+        <Button Height="50" Width="100" VerticalAlignment="Top" Margin="0, 50, 0, 0" Content="Add" Click="Button_Click"/>
+        <ns:Spoiler Height="200">
+            <ns:Spoiler.Object>
+                <TextBlock Text="THERE'S ONE IMPOSTER AMONG US!"/>
+            </ns:Spoiler.Object>
+        </ns:Spoiler>
+        <StackPanel Margin="0, 110, 0, 0" x:Name="spanel" ns:WatermarkTextBox.TextChanged="StackPanel_TextChanged">
+            <ns:WatermarkTextBox x:Name="wmtb" Height="20" VerticalAlignment="Top" Watermark="Color"/>
+        </StackPanel>
+        <Button Width="200" Height="100" Margin="0, 300, 0, 0" Content="LET ME IN! LET ME IIIIIIIIIIIIIIIIIIIN" Command="local:ExitRoutedUICommand.Exit"/>
+
+    </Grid>
+</Window>
