@@ -115,14 +115,14 @@ namespace LAB6_7
         private void undoBtn_Click(object sender, RoutedEventArgs e)
         {
             catalog.GamesControl.ItemsSource = gamesMemento;
-            var view = CollectionViewSource.GetDefaultView(gamesMemento);
+            var view = CollectionViewSource.GetDefaultView(catalog.GamesControl.ItemsSource);
             view.Refresh();
         }
 
         private void redoBtn_Click(object sender, RoutedEventArgs e)
         {
             catalog.GamesControl.ItemsSource = games;
-            var view = CollectionViewSource.GetDefaultView(games);
+            var view = CollectionViewSource.GetDefaultView(catalog.GamesControl.ItemsSource);
             view.Refresh();
         }
     }

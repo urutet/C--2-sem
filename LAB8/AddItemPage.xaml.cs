@@ -7,6 +7,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -44,6 +45,8 @@ namespace LAB6_7
             mainWindow.gamesMemento = mainWindow.games;
             mainWindow.games.Add(game);
 
+            ClearAllFields();
+
             this.NavigationService.Navigate(mainWindow.catalog);
         }
 
@@ -73,6 +76,24 @@ namespace LAB6_7
         private void CustomControl1_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("You've just triggered hidden custom control!");
+
+            //C# animation (still fails)
+            ColorAnimation animation;
+            animation = new ColorAnimation();
+            animation.From = Colors.Orange;
+            animation.To = Colors.Gray;
+            animation.Duration = new Duration(TimeSpan.FromSeconds(5));
+            this.customBtn.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
+        }
+
+        private void ClearAllFields()
+        {
+            Game_name_textbox.Clear();
+            Game_fullDef_textbox.Document.Blocks.Clear();
+            Game_shortDef_textbox.Document.Blocks.Clear();
+            Game_price_textbox.Clear();
+            add_item_image.Source = null;
+
         }
     }
 }
