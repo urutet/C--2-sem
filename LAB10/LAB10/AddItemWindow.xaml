@@ -1,0 +1,49 @@
+﻿<Window x:Class="LAB10.AddItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LAB10"
+        xmlns:ns="clr-namespace:LAB9.User_Controls"
+        mc:Ignorable="d"
+        Title="AddItemWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Процессор" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0">
+            <StackPanel>
+                <ns:WatermarkTextBox Margin="5" Watermark="Название процессора" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Количество ядер" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Тактовая частота" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Кэш L3" VerticalAlignment="Center"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="ОЗУ" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="2">
+            <StackPanel>
+                <ns:WatermarkTextBox Margin="5" Watermark="Название ОЗУ" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Объем ОЗУ" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Частота ОЗУ" VerticalAlignment="Center"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Видеокарты" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="4">
+            <StackPanel>
+                <ns:WatermarkTextBox Margin="5" Watermark="Название видеокарты" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Объем GRAM" VerticalAlignment="Center"/>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
