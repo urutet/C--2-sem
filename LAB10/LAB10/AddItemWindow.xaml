@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LAB10"
         xmlns:ns="clr-namespace:LAB9.User_Controls"
+        xmlns:vm="clr-namespace:LAB10.ViewModels"
         mc:Ignorable="d"
         Title="AddItemWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <vm:AddItemVM/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -26,24 +30,26 @@
         </Grid.RowDefinitions>
         <GroupBox Header="Процессор" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="0">
             <StackPanel>
-                <ns:WatermarkTextBox Margin="5" Watermark="Название процессора" VerticalAlignment="Center"/>
-                <ns:WatermarkTextBox Margin="5" Watermark="Количество ядер" VerticalAlignment="Center"/>
-                <ns:WatermarkTextBox Margin="5" Watermark="Тактовая частота" VerticalAlignment="Center"/>
-                <ns:WatermarkTextBox Margin="5" Watermark="Кэш L3" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Название процессора" VerticalAlignment="Center" TextBind="{Binding Processor_Name, Mode=OneWayToSource}"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Количество ядер" VerticalAlignment="Center" TextBind="{Binding Cores, Mode=OneWayToSource}"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Тактовая частота" VerticalAlignment="Center" TextBind="{Binding PClock_HZ, Mode=OneWayToSource}"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Кэш L3" VerticalAlignment="Center" TextBind="{Binding L3_Cache, Mode=OneWayToSource}"/>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="ОЗУ" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="2">
             <StackPanel>
-                <ns:WatermarkTextBox Margin="5" Watermark="Название ОЗУ" VerticalAlignment="Center"/>
-                <ns:WatermarkTextBox Margin="5" Watermark="Объем ОЗУ" VerticalAlignment="Center"/>
-                <ns:WatermarkTextBox Margin="5" Watermark="Частота ОЗУ" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Название ОЗУ" VerticalAlignment="Center" TextBind="{Binding RAM_Name, Mode=OneWayToSource}"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Объем ОЗУ" VerticalAlignment="Center" TextBind="{Binding RAM_Size, Mode=OneWayToSource}"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Частота ОЗУ" VerticalAlignment="Center" TextBind="{Binding Clock_HZ, Mode=OneWayToSource}"/>
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Видеокарты" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Row="0" Grid.Column="4">
             <StackPanel>
-                <ns:WatermarkTextBox Margin="5" Watermark="Название видеокарты" VerticalAlignment="Center"/>
-                <ns:WatermarkTextBox Margin="5" Watermark="Объем GRAM" VerticalAlignment="Center"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Название видеокарты" VerticalAlignment="Center" TextBind="{Binding GPU_Name, Mode=OneWayToSource}"/>
+                <ns:WatermarkTextBox Margin="5" Watermark="Объем GRAM" VerticalAlignment="Center" TextBind="{Binding GRAM_Size, Mode=OneWayToSource}"/>
             </StackPanel>
         </GroupBox>
+
+        <Button Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Content="Добавить" Command="{Binding AddItemCommand}"/>
     </Grid>
 </Window>

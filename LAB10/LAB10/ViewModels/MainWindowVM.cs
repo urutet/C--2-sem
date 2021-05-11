@@ -5,12 +5,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Controls;
 
 namespace LAB10.ViewModels
 {
     class MainWindowVM : INotifyPropertyChanged
     {
-        public DataView dataView; //{ get => dataView; set { dataView = value; OnPropertyChanged(); } }
+        public DataGrid dataGr { get; set; }
         public Models.DBCommandsModel dBCommands { get; }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
@@ -44,7 +45,7 @@ namespace LAB10.ViewModels
 
         public void PCsGridUpdate()
         {
-            dataView = dBCommands.Select().DefaultView;
+            dataGr.DataContext = dBCommands.Select().Tables[0].DefaultView;
         }
 
     }

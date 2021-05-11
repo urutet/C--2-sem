@@ -22,12 +22,19 @@
             <Button x:Name="addBtn" Content="{StaticResource AddImage}" FontSize="20" Margin="10" Command="{Binding OpenAddItemVM}"/>
             <Button Content="Refresh" Command="{Binding RefreshDataGridCommand}"/>
         </StackPanel>
-        <DataGrid x:Name="PCsGrid" AutoGenerateColumns="True" Margin="0, 50, 0, 0" ItemsSource="{Binding dataView}">
+        <DataGrid x:Name="PCsGrid" AutoGenerateColumns="True" Margin="0, 50, 0, 0" ItemsSource="{Binding dataGr}">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" Width="200" />
-                <DataGridHyperlinkColumn Header="Процессор" Width="200" />
-                <DataGridTextColumn Header="ОЗУ" Width="50" />
-                <DataGridTextColumn Header="Видеокарта" Width="200" />
+                <DataGridTextColumn Binding="{Binding Path=PC_NAME}" Header="Название" Width="200" />
+                <DataGridTextColumn Binding="{Binding Path=PROCESSOR_NAME}" Header="Процессор" Width="200" />
+                <DataGridTextColumn Binding="{Binding Path=RAM_SIZE}" Header="ОЗУ" Width="50" />
+                <DataGridTextColumn Binding="{Binding Path=GPU_NAME}" Header="Видеокарта" Width="200" />
+                <DataGridTemplateColumn Header="Фото">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <!--<Image Source="{Binding Path=}" />-->
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

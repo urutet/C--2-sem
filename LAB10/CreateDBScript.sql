@@ -82,7 +82,11 @@ from openrowset(BULK N'D:\BSTU\2 Курс\2 Семестр\ООП 2 сем\LAB10\DBImg\PC3.png', 
 select * from COMPUTERS
 
 create view PC_VIEW
-as select COMPUTERS.PC_NAME as [Название], PROCESSORS.PROCESSOR_NAME [Процессор], RAMS.RAM_SIZE [ОЗУ], GPUS.GPU_NAME [Видеокарта]  from COMPUTERS
+as select IMG, PC_NAME, PROCESSOR_NAME, RAM_SIZE, GPU_NAME  from COMPUTERS
 join RAMS on COMPUTERS.RAM_ID = RAMS.ID
 join GPUS on COMPUTERS.GPU_ID = GPUS.ID
 join PROCESSORS on COMPUTERS.PROCESSOR_ID = PROCESSORS.ID
+
+drop view PC_VIEW
+
+select * from PC_VIEW
