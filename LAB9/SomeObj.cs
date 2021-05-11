@@ -45,7 +45,6 @@ namespace LAB9
 
         private static object CorrectValue(DependencyObject dObj, object baseValue)
         {
-            int i;
             if ((int)baseValue > 100)
                 return 100;
             else

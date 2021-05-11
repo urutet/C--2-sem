@@ -31,14 +31,11 @@ namespace LAB9
             MessageBox.Show(so.Title.ToString() + so.Price.ToString());
         }
 
-        private void StackPanel_TextChanged(object sender, RoutedEventArgs e)
+        private void StackPanel_MouseEnter(object sender, RoutedEventArgs e)
         {
-            if (wmtb.TextBind.Contains("red"))
-            {
                 SolidColorBrush mySolidColorBrush = new SolidColorBrush();
                 mySolidColorBrush.Color = Color.FromArgb(255, 0, 0, 255);
                 spanel.Background = mySolidColorBrush;
-            }
         }
 
         private void Exit_Executed(object sender, ExecutedRoutedEventArgs e)

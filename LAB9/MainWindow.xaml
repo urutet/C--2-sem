@@ -26,7 +26,7 @@
                 <TextBlock Text="THERE'S ONE IMPOSTER AMONG US!"/>
             </ns:Spoiler.Object>
         </ns:Spoiler>
-        <StackPanel Margin="0, 110, 0, 0" x:Name="spanel" ns:WatermarkTextBox.TextChanged="StackPanel_TextChanged">
+        <StackPanel Margin="0, 110, 0, 0" x:Name="spanel" ns:WatermarkTextBox.MouseEnterRouted="StackPanel_MouseEnter">
             <ns:WatermarkTextBox x:Name="wmtb" Height="20" VerticalAlignment="Top" Watermark="Color"/>
         </StackPanel>
         <Button Width="200" Height="100" Margin="0, 300, 0, 0" Content="LET ME IN! LET ME IIIIIIIIIIIIIIIIIIIN" Command="local:ExitRoutedUICommand.Exit"/>

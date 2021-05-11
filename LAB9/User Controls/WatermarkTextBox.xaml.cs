@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -19,8 +20,8 @@ namespace LAB9.User_Controls
     public partial class WatermarkTextBox : UserControl
     {
 
-        public static readonly RoutedEvent TextChangedEvent =
-            EventManager.RegisterRoutedEvent("TextChanged", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(WatermarkTextBox));
+        public static readonly RoutedEvent MouseEnterRoutedEvent =
+            EventManager.RegisterRoutedEvent("MouseEnterRouted", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(WatermarkTextBox));
 
         public string TextBind
         {
@@ -59,10 +60,10 @@ namespace LAB9.User_Controls
                 WatermarkTextBlock.Visibility = Visibility.Hidden;
         }
 
-        public event RoutedEventHandler TextChanged
+        public event RoutedEventHandler MouseEnterRouted
         {
-            add { AddHandler(TextChangedEvent, value); }
-            remove { RemoveHandler(TextChangedEvent, value); }
+            add { AddHandler(WatermarkTextBox.MouseEnterEvent, value); }
+            remove { RemoveHandler(WatermarkTextBox.MouseEnterEvent, value); }
         }
     }
 }
