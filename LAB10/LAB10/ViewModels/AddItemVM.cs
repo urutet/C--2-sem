@@ -21,6 +21,8 @@ namespace LAB10.ViewModels
         public string GPU_Name { get; set; }
         public int GRAM_Size { get; set; }
 
+        public string PC_NAME { get; set; }
+
         public RelayCommand AddItemCommand { get; set; }
 
         public AddItemVM()
@@ -29,7 +31,7 @@ namespace LAB10.ViewModels
 
             AddItemCommand = new RelayCommand(obj =>
             {
-                dBCommands.Insert(RAM_Name, Clock_HZ, RAM_Size, Processor_Name, Cores, PClock_HZ, L3_Cache, GPU_Name, GRAM_Size);
+                dBCommands.Insert(RAM_Name, Clock_HZ, RAM_Size, Processor_Name, Cores, PClock_HZ, L3_Cache, GPU_Name, GRAM_Size, PC_NAME);
             });
         }
     }

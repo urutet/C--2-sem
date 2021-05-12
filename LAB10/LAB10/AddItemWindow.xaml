@@ -49,7 +49,7 @@
                 <ns:WatermarkTextBox Margin="5" Watermark="Объем GRAM" VerticalAlignment="Center" TextBind="{Binding GRAM_Size, Mode=OneWayToSource}"/>
             </StackPanel>
         </GroupBox>
-
+        <ns:WatermarkTextBox Grid.Row="2" Grid.ColumnSpan="2" Watermark="Название ПК" TextBind="{Binding PC_NAME, Mode=OneWayToSource}"/>
         <Button Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Content="Добавить" Command="{Binding AddItemCommand}"/>
     </Grid>
 </Window>

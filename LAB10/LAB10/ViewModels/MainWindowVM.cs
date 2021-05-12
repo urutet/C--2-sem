@@ -45,7 +45,8 @@ namespace LAB10.ViewModels
 
         public void PCsGridUpdate()
         {
-            dataGr.DataContext = dBCommands.Select().Tables[0].DefaultView;
+            //dataGr.DataContext = 
+            dBCommands.Select();
         }
 
     }
