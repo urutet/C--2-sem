@@ -22,7 +22,7 @@
             <Button x:Name="addBtn" Content="{StaticResource AddImage}" FontSize="20" Margin="10" Command="{Binding OpenAddItemVM}"/>
             <Button Content="Refresh" Command="{Binding RefreshDataGridCommand}"/>
         </StackPanel>
-        <DataGrid x:Name="PCsGrid" AutoGenerateColumns="True" Margin="0, 50, 0, 0" ItemsSource="{Binding dataGr}">
+        <DataGrid x:Name="PCsGrid" AutoGenerateColumns="True" Margin="0, 50, 0, 0" ItemsSource="{Binding Data}">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Path=PC_NAME}" Header="Название" Width="200" />
                 <DataGridTextColumn Binding="{Binding Path=PROCESSOR_NAME}" Header="Процессор" Width="200" />

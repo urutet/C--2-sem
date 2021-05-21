@@ -11,7 +11,8 @@ namespace LAB10.ViewModels
 {
     class MainWindowVM : INotifyPropertyChanged
     {
-        public DataGrid dataGr { get; set; }
+        DataView data;
+        public DataView Data { get => data; set { data = value; OnPropertyChanged(); } }
         public Models.DBCommandsModel dBCommands { get; }
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName] string prop = "")
@@ -45,8 +46,9 @@ namespace LAB10.ViewModels
 
         public void PCsGridUpdate()
         {
-            //dataGr.DataContext = 
-            dBCommands.Select();
+            Data = 
+            dBCommands.Select().DefaultView;
+            DBConnection.getDBConnection().Close();
         }
 
     }

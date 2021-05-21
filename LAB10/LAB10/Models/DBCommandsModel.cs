@@ -53,7 +53,6 @@ namespace LAB10.Models
                 }
 
 
-                DBConnection.getDBConnection().Close();
 
                 return dt;
             }
