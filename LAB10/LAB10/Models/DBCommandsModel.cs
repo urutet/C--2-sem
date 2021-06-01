@@ -28,7 +28,6 @@ namespace LAB10.Models
         {
             try
             {
-                DBConnection.getDBConnection().Open();
                 string Query = "SELECT * FROM dbo.PC_VIEW";
                 SqlCommand sqlCommand = new SqlCommand(Query, DBConnection.getDBConnection());
                 sqlCommand.CommandType = CommandType.Text;

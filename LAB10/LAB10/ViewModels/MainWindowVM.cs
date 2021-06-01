@@ -46,6 +46,7 @@ namespace LAB10.ViewModels
 
         public void PCsGridUpdate()
         {
+            DBConnection.getDBConnection().Open();
             Data = 
             dBCommands.Select().DefaultView;
             DBConnection.getDBConnection().Close();
